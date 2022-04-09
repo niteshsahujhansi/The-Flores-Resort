@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flores Resort</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet"> -->
+
+    <style>
+        body {
+            background-color: rgb(251, 253, 254);
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 3vw;
+            text-align: center;
+            margin: 1%;
+            color: rgb(44, 124, 155);
+        }
+
+        h3 {
+            font-size: 25px;
+            text-align: center;
+            margin: 1%;
+        }
+
+        h4 {
+            font-size: 20px;
+            text-align: center;
+            margin: 1%;
+        }
+
+        p {
+            text-align: center;
+            margin: 30px;
+            font-size: 1.5rem;
+            color: rgb(31, 79, 98);
+        }
+
+        .explore-more {
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+            transform: 2s;
+            transition: 1s;
+        }
+
+        .explore-more:hover {
+            font-size: 22px;
+        }
+
+        header {
+            position: relative;
+            /* z-index: 1; */
+            height: 130px;
+            color: black;
+            background: white;
+            text-transform: uppercase;
+
+        }
+
+        /* header  */
+        h1 {
+            font-size: 30px;
+            text-align: center;
+            text-shadow: 5px 5px 5px rgb(144, 67, 77);
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 17px;
+        }
+
+        h1 a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .log-in-button {
+            display: inline;
+            left: 100px;
+            position: absolute;
+            top: 34px;
+            font-size: 20px;
+            cursor: pointer;
+            background: white;
+            border: 2px solid black;
+            padding: 5px 25px;
+            text-transform: uppercase;
+        }
+
+        .log-in-button a:visited {
+            color: black;
+        }
+
+        .nav {
+            width: 100%;
+            position: absolute;
+            top: 30px;
+        }
+
+        .nav ul,
+        .nav2 ul {
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .nav ul li {
+            margin: 0px 300px;
+            list-style: none;
+        }
+
+        .nav ul li a,
+        .nav2 ul li a {
+            text-decoration: none;
+            font-size: 17px;
+            color: black;
+        }
+        
+        .nav2 ul li {
+            padding: 0px 22px;
+            list-style: none;
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .nav2 ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .book-button {
+            position: absolute;
+            top: 34px;
+            right: 102px;
+            font-size: 20px;
+            cursor: pointer;
+            background: white;
+            border: 2px solid black;
+            padding: 5px 25px;
+            text-transform: uppercase;
+        }
+
+        .book-button a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .explore ul {
+            position: absolute;
+            right: 0;
+            /* margin-top: 12.2px; */
+            flex-direction: row;
+            display: none;
+            width: 100%;
+            background: white;
+            z-index: 1;
+        }
+
+        .explore-ul div {
+            padding-top: 50px;
+        }
+
+        .explore-ul li a {
+            display: inline-block;
+            margin: 10px 60px;
+        }
+
+        .explore:hover .explore-ul {
+            display: flex;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .bar {
+            display: block;
+            height: 3px;
+            width: 25px;
+            margin: 5px;
+            background-color: black;
+        }
+
+        /* responsive header  */
+    </style>
+
+</head>
+
+<body>
+    <!-- header  -->
+    <header>
+        <div class="logo">
+            <h1><a href="home.html">The Flores</a></h1>
+            <h1><a href="home.html">Resort</a></h1>
+        </div>
+        <button class="log-in-button" type="button"><a href="login.html">Log-In</a></button>
+        <nav class="nav">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Connect</a></li>
+            </ul>
+        </nav>
+        <button class="book-button" type="button"><a href="">Book</a></button>
+        <nav class="nav2">
+            <ul>
+                <li class="explore"><a href="">Explore</a>
+                    <ul class="explore-ul">
+                        <div>
+                            <li><a href="our_story.html">Our Story</a></li>
+
+                        </div>
+                        <div>
+                            <li><a href="Our_parterners.html">Our Partners and Suppliers</a></li>
+
+                        </div>
+                        
+                    </ul>
+                </li>
+
+                <li><a href="our_team.html">Our Team</a></li>
+
+                <li class="explore"><a href="">Suites</a>
+                    <ul class="explore-ul">
+                        <div>
+                            <li><a href="queen.html">Queen Suites</a></li>
+
+                        </div>
+                        <div>
+                            <li><a href="king.html">King Suites</a></li>
+
+                        </div>
+                    </ul>
+                </li>
+                <li class="explore"><a href="residences.html">Residences</a>
+                    <ul class="explore-ul">
+                        <div>
+                            <li><a href="kensington.html">The Kensington Palace</a></li>
+
+                        </div>
+                        <div>
+                            <li><a href="william.html">The William & Kate</a></li>
+
+                        </div>
+                        <div>
+                            <li><a href="victoria.html">The Victoria & Albert</a></li>
+                        </div>
+                        <div>
+                            <li><a href="prince.html">The Prince of Wales</a></li>
+                        </div>
+
+                    </ul>
+
+
+
+
+
+                </li>
+
+
+                <li><a href="offers.html">Offers & Gifts</a></li>
+                <li><a href="dining.html">Dining</a></li>
+                <li><a href="wedding.html">Weddings & Events</a></li>
+                <!-- <li><a href="">Festive</a></li> -->
+                <!-- <li><a href="">Covid-19 Update</a></li> -->
+                <!-- <li><a href="">Discover</a></li> -->
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </nav>
+
+    </header>
+</body>
+
+</html>
+
+
+<!--header footer script 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function(){
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+<div id="header"></div>
+<div id="footer"></div> -->

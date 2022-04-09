@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flores Resort</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+    <!-- header footer script  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+</head>
+
+<body>
+    <!-- header  -->
+    <header id="header"></header>
+    <!-- video  -->
+    <section class="video">
+        <video style="position:absolute" autoplay muted loop width="100%" src="img/video11.mp4"></video>
+        <img  src="img/video-img.png" alt="">
+    </section>
+    <!-- book form -->
+    <div class="book">
+        <form action="" class="book-form">
+            <div class="book-item">
+                <label for="">Check-in</label><br>
+                <input type="date">
+            </div>
+            <div class="book-item">
+                <label for="">Check-out</label><br>
+                <input type="date">
+            </div>
+            <div class="book-item">
+                <label for="">Adults</label><br>
+                <input type="number" value="2" min="1">
+            </div>
+            <div class="book-item">
+                <label for="">Child</label><br>
+                <input type="number" value="0" min="0">
+            </div>
+            <div class="book-item">
+                <label for="">Room</label><br>
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="book-item">
+                <button class="btn">Book Now</button>
+                <!-- <input class="btn" type="submit" value="Book Now"> -->
+            </div>
+            <br>
+        </form>
+    </div>
+    <!-- one  -->
+    <div class="one">
+        <p>&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <br>
+        <h2>The Flores Resort</h2>
+        <p>Pondicherry</p>
+        <br>
+        <h2>A rare glimpse into Pondicherry's</h2>
+        <h2>history</h2>
+        <br>
+        <p>Step into our Grade-II listed Victorian building and discover old world charm, beautiful rich</p>
+        <p>furnishings, exquisite original arts and outstanding cuisine. Instantly recognisable for our</p>
+        <p>striking red-and-white brick façade, The Flores Resort is a true Pondicherry landmark. Just a short</p>
+        <p>stroll from the legendary Royal Albert Hall, as well as Notting Hill and Knightsbridge, our leafy</p>
+        <p>surroundings are perfect for a beautiful picnic in the park.</p>
+    </div>
+    <!-- reason to love -->
+    <div class="slideshow-container">
+        <h2 class="heading">All the reasons to love The Flores</h2>
+        <div class="slide">
+            <h3><a href=""> Our Location</a></h3>
+            <h6><a href="">We are proud to be the neighbours of the British Royal Family</a></h6>
+            <img width="80%" src="img/location.jpg" alt="">
+        </div>
+        <div class="slide">
+            <h3><a href="">A landmark Victorian building</a></h3>
+            <h6><a href="">Dating back to 1883, our Grade-II listed building is instantly recognisable</a></h6>
+            <img width="80%" src="img/landmark.jpg" alt="">
+        </div>
+        <div class="slide">
+            <h3><a href="">A culinary journey</a></h3>
+            <h6><a href="">Our passion for comforting & creative cuisine comes to spectacular life</a></h6>
+            <img width="80%" src="img/cuisine.jpg" alt="">
+        </div>
+
+        <span class="arrow-left" onclick="controller(-1)">&#10094;</span>
+        <span class="arrow-right" onclick="controller(1)">&#10095;</span>
+
+    </div>
+    <!-- at a glance   -->
+    <div class="glance">
+        <h2>The Flores Resort at a glance</h2>
+        <div class="glance-item">
+            <div>
+                <p>Awarded a prestigious Forbes Five Star rating</p>
+                <p>Grade II-listed mansion hotel</p>
+                <p>43 deluxe guest rooms and 13 luxury suites</p>
+                <p>Six long-stay Residences</p>
+                <p>Located opposite Kensington Palace & Gardens</p>
+            </div>
+            <div>
+                <p>Fine British dining in Cheneston's Restaurant</p>
+                <p>Award-winning Afternoon Tea in the Park Lounge</p>
+                <p>Exceptional signature cocktails in Stables Bar</p>
+                <p>Unwind in the sauna and heated resistance pool</p>
+                <p>24-hour butler service</p>
+            </div>
+        </div>
+    </div>
+    <!-- zoon effect very best and creative cuisine -->
+    <div class="zoom-effect">
+        <div>
+            <a href=""><img src="img/best.jpg" alt=""></a><br><br>
+            <h2>Give the very best</h2>
+            <p>Exceptional dining experiences, overnight escapes and thoughtful surprises... our gift vouchers create
+                the perfect gift. </p>
+            <a class="explore-more" href="">Explore More &nbsp; &rarr;</a>
+        </div>
+        <div>
+            <a href=""><img src="img/creative.jpg" alt=""></a><br><br>
+            <h2>Creative cuisine</h2>
+            <p>From exceptional Afternoon Tea in our book-lined Park Lounge to fine dining in the beautiful Cheneston’s
+                restaurant...</p>
+            <a class="explore-more" href="">Explore More &nbsp; &rarr;</a>
+        </div>
+    </div>
+    <!-- extraordinary-villa  -->
+    <div class="extraordinary-villa">
+        <div class="extraordinary">
+            <a href=""><img src="img/extraordinary.jpg" alt=""></a>
+        </div>
+
+        <div class="extraordinary-text">
+            <h2>Extraordinary experiences</h2>
+            <p>We pride ourselves on our local relationships, and carefully design remarkable experiences for our
+                guests. From behind the scenes tours of the Royal Albert Hall to private in-suite concerts by members of
+                the Royal Philharmonic Orchestra, every detail provides a deep connection with our location.</p>
+            <a class="explore-more" href="">Discover more &nbsp; &rarr;</a>
+        </div>
+
+        <div class="villa-text">
+            <h2>A warm welcome in our Villas</h2>
+            <p>From 12th April, we are delighted to open our Residences once more. When you arrive, our delicious and
+                carefully curated complimentary hamper of treats will be waiting in your private Residence, including
+                biscuits, macarons, mixed nuts and chocolates, all created by our Executive Chef Daniel Putz and his
+                wonderful team. Your kitchen will also be fully stocked with our compliments.</p>
+            <a class="explore-more" href="">Discover more &nbsp; &rarr;</a>
+        </div>
+        <div class="villa">
+            <a href=""><img src="img/villa.jpg" alt=""></a>
+        </div>
+    </div>
+    <!-- stay in touch -->
+    <!-- footer  -->
+    <footer id="footer"></footer>
+    <script src="home.js"></script>
+</body>
+
+</html>

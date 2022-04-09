@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- header  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+    <style>
+        .flexbox {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+            margin: 10px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            /* border-bottom: 2px solid black; */
+        }
+
+        .flexbox div {
+            margin: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <img src="img/about-us.jpg" width="100%" alt="">
+
+    <h2>About The Flores Resort</h2>
+    <p>The renowned The Flores Resort is now a part of an over two decades old, well known and established group in
+        puducherry.</p>
+    <p>The conglomerate employs more than 100 people and comprises of a chain of this resort.</p>
+    <p>The Resort has recently been renovated and converted into a luxury class Resort where comfort, ambience and
+        hospitality knows no bounds.</p>
+    <p>If convenience, comfort and reasonable price is what you are looking out for, Jhansi Hotel is the one and only
+        place to suit your budget and taste.</p>
+    <p>Our actions are in line with our beliefs. We are a customer-focused hotel. We believe in giving our customers the
+        experience that goes a step ahead of their expectations. We also believe in being honest and in having the most
+        desirable approach to our customers. </p>
+    <p>All our staff have a very friendly approach with a smile. We also believe in going the extra mile to ensure that
+        you truly feel special. Whether you are travelling for business or leisure we aim to give you a personalized
+        service and make you feel at home.</p>
+
+    <h2>Know More</h2>
+    <p>Known for our discrete nature, we are proud to be the neighbours of the British Royal</p>
+    <p>Family, located just opposite Kensington Palace, with exceptional views across the</p>
+    <p>Gardens to this most famous of homes. Our leafy surroundings are perfect for a picnic</p>
+    <p>in the park and we are just a short stroll from the legendary Royal Albert Hall, as well</p>
+    <p>as Notting Hill and Knightsbridge. We are so proud to be a part of the family-owned and</p>
+    <p>run The Flores Resort Collection with a prestigious Forbes Five-Star rating.</p>
+
+    <div id="footer"></div>
+</body>
+
+</html>

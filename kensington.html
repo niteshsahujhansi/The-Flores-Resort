@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kensington Gardens</title>
+    <!-- header  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+    <style>
+        .room {
+            font-family: 'Roboto', sans-serif;
+            margin: 50px 380px;
+        }
+
+        .room img {
+            width: 750px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            height: 530px;
+            width: 750px;
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            transform: translateX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            background-color: rgb(8, 0, 16);
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            width: 49.5%;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        /* at a glance  */
+        .glance-item {
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid black;
+        }
+
+        .glance-item div {
+            margin: 10px 50px 50px 50px;
+        }
+
+        .glance-item div p {
+            text-align: left;
+            margin: 20px;
+            font-size: 1.5rem;
+        }
+
+        .bullet li {
+            list-style: disc;
+        }
+
+        .center {
+            margin: 20px 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <section class="video">
+        <video autoplay muted loop width="100%" src="img/rooms/ken.mp4"></video>
+    </section>
+
+
+    <h2>The Kensington Gardens</h2>
+    <div class="center">
+        <p>The magnificent split-level Kensington Gardens Residence is one of the finest in London. The prestigious
+            Kensington abode has been brought to life with a fresh twist, reflecting a warm and convivial ambience in
+            your home-away-from-home.</p>
+        <p>A quiet haven, the two elegant bedrooms situated downstairs are beautifully designed and both lead out to a
+            charming courtyard seating six people. The luxurious master bedroom has an en-suite marble walk-in shower
+            room, and next to the second bedroom is another full bathroom. Both bedrooms benefit from natural daylight,
+            and a serene and fresh turquoise blue and white colour scheme runs throughout the residence, with
+            traditional, understated patterns and fine fabrics and linens.</p>
+        <p>On the upper-entrance level, the comfortable living area echoes the stylish splendour, with a feature
+            mirrored wall in the lounge, which leads to a spacious concealed kitchen offering all modern amenities. The
+            impressive lounge can accommodate additional sleeping space for two children on matching day beds and there
+            is an abundance of storage space and a walk-in closet which is ideal for longer stays and for storing
+            shopping.</p>
+    </div>
+
+
+    <div class="room">
+        <div class="carousel">
+            <div class="image-container" id="imgs">
+                <!-- <img src="img/rooms/ken1.png" alt=""> -->
+                <img src="img/rooms/ken2.png" alt="">
+                <img src="img/rooms/ken3.png" alt="">
+                <img src="img/rooms/ken4.png" alt="">
+                <img src="img/rooms/ken5.png" alt="">
+            </div>
+            <div class="buttons-container">
+                <button id="left" class="btn">Prev</button>
+                <button id="right" class="btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- at a glance   -->
+    <div class="glance">
+        <h2>Residence features</h2>
+        <div class="glance-item">
+            <div>
+                <p>Ground floor location spread over two floors including the basement</p>
+                <p>A complimentary welcome hamper of essentials on arrival</p>
+                <p>The main entrance is on the ground floor which enters into the lounge with spacious kitchen</p>
+                <p>Outside patio area on the basement level</p>
+                <p>Bedrooms on the basement level and have natural daylight, both exit onto the deck</p>
+                <p>Equipped with a walk-in shower and a bathtub</p>
+                <!-- <p>Bathrobes and slippers</p> -->
+                <!-- <p>Luxury Floris toiletries</p> -->
+                <!-- <p>Individually controlled heating and cooling system</p> -->
+            </div>
+            <div>
+                <p>Luxury fabrics, antique furniture and spectacular artwork</p>
+                <p>A beautiful fireplace in each living room</p>
+                <p>Full 24-hour hotel service but with the extra living space of a private apartment</p>
+                <p>Complimentary access to hotel Health Club</p>
+                <p>Full grocery shopping service on request</p>
+                <p>A welcome hamper of goodies for longer staying guests</p>
+                <p>'Suite treats' each night at Turndown</p>
+                <!-- <p>Sky television and Chromecast</p> -->
+            </div>
+            <div>
+                <p>Two-bedroom residence with two bathrooms - one walk-in shower in the ensuite and one main bathroom
+                </p>
+                <p>Security entry phone with a video system</p>
+                <p>Selection of magazines and books</p>
+                <p>Washing machine and dryer</p>
+                <p>Welcome drink upon arrival</p>
+                <p>24-hour butler service</p>
+                <p>Grocery shopping service available</p>
+                <p>Access to the gym, resistance plunge pool and sauna</p>
+                <p>Luxury toiletries</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        const imgs = document.getElementById('imgs')
+        const leftBtn = document.getElementById('left')
+        const rightBtn = document.getElementById('right')
+
+        const img = document.querySelectorAll('#imgs img')
+
+        let idx = 0
+
+        let interval = setInterval(run, 2000)
+
+        function run() {
+            idx++
+            changeImage()
+        }
+
+        function changeImage() {
+            if (idx > img.length - 1) {
+                idx = 0
+            } else if (idx < 0) {
+                idx = img.length - 1
+            }
+
+            imgs.style.transform = `translateX(${-idx * 750}px)`
+        }
+
+        function resetInterval() {
+            clearInterval(interval)
+            interval = setInterval(run, 2000)
+        }
+
+        rightBtn.addEventListener('click', () => {
+            idx++
+            changeImage()
+            resetInterval()
+        })
+
+        leftBtn.addEventListener('click', () => {
+            idx--
+            changeImage()
+            resetInterval()
+        })
+    </script>
+
+</body>
+
+</html>

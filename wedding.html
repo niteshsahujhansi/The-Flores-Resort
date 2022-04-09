@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residences</title>
+    <!-- header  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+    <style>
+        .flexbox {
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: 50% 40%;
+            margin: 100px;
+        }
+
+        .room {
+            font-family: 'Roboto', sans-serif;
+            margin: 50px 380px;
+        }
+
+        .room img {
+            width: 750px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            height: 530px;
+            width: 750px;
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            transform: translateX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            background-color: rgb(8, 0, 16);
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            width: 49.5%;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <img src="img/wedding.png" width="100%" alt="">
+
+
+    <h2>Memorable Weddings at The Flores Resort</h2>
+    <div class="first">
+        <p>Ideally suited for exquisite private dining events and elegant cocktail receptions, with a spectacular
+            chandelier and open fireplace.</p>
+        <h3>contact: +91 510 7963793, +918400306960</h3>
+        <h4>Visit: 143/A, Lake View Road,
+            Yanam Puducherry,
+            India
+            Pin code- 533465</h4>
+    </div>
+
+    <div class="flexbox">
+        <div class="">
+            <a href=""><img src="img/wedding1.png" alt=""></a>
+        </div>
+
+        <div class="">
+            <!-- <h2>Welcome hamper</h2> -->
+            <p>What makes a wedding truly special at The Flores Resort is the range of specialized services on offer.
+                With so much to organize, you can relax in the knowledge that we will take care of your every need,
+                ensuring that your wedding day is everything you want it to be. The Flores Resort offer a perfect
+                destination that ensures a blend of traditional and exquisite modern luxuries, making your wedding a
+                memorable one. Choose The Flores Resort as your wedding destination and be rest assured that your
+                wedding will be extra special.</p>
+
+        </div>
+    </div>
+
+    <div class="room">
+        <div class="carousel">
+            <div class="image-container" id="imgs">
+                <!-- <img src="img/wedding1.png" alt=""> -->
+                <img src="img/wedding2.png" alt="">
+                <img src="img/wedding3.png" alt="">
+                <img src="img/wedding4.png" alt="">
+                <img src="img/wedding5.png" alt="">
+            </div>
+            <div class="buttons-container">
+                <button id="left" class="btn">Prev</button>
+                <button id="right" class="btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+
+
+    <div id="footer"></div>
+
+    <script>
+        const imgs = document.getElementById('imgs')
+        const leftBtn = document.getElementById('left')
+        const rightBtn = document.getElementById('right')
+
+        const img = document.querySelectorAll('#imgs img')
+
+        let idx = 0
+
+        let interval = setInterval(run, 2000)
+
+        function run() {
+            idx++
+            changeImage()
+        }
+
+        function changeImage() {
+            if (idx > img.length - 1) {
+                idx = 0
+            } else if (idx < 0) {
+                idx = img.length - 1
+            }
+
+            imgs.style.transform = `translateX(${-idx * 750}px)`
+        }
+
+        function resetInterval() {
+            clearInterval(interval)
+            interval = setInterval(run, 2000)
+        }
+
+        rightBtn.addEventListener('click', () => {
+            idx++
+            changeImage()
+            resetInterval()
+        })
+
+        leftBtn.addEventListener('click', () => {
+            idx--
+            changeImage()
+            resetInterval()
+        })
+    </script>
+
+</body>
+
+</html>

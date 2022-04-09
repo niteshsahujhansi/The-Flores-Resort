@@ -1,0 +1,186 @@
+/* book form  */
+.book-form {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+
+}
+
+.book-item {
+    margin: 10px;
+    padding: 10px;
+}
+
+.book-item label {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    margin: -5px;
+}
+
+.book-item input {
+    font-size: 15px;
+    padding: 5px;
+}
+
+.book-item input[type='number'] {
+    width: 120px;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-size: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/*about  */
+.one {
+    text-align: center;
+    padding: 50px;
+    border-bottom: 2px solid black;
+}
+
+.one p {
+    font-size: 1.4vw;
+    margin: 5px;
+}
+
+/* slideshow  */
+.slideshow-container {
+    position: relative;
+    padding-bottom: 100px;
+    margin: 80px 0px;
+    border-bottom: 2px solid black;
+}
+
+.slide {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.slideshow-container h3 {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
+.slideshow-container h3 a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+.slide h6 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.slide h6 a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.arrow-left {
+    display: block;
+    font-size: 50px;
+    background-color: white;
+    position: absolute;
+    top: 45%;
+    left: 18%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.arrow-right {
+    display: block;
+    font-size: 50px;
+    background-color: white;
+    position: absolute;
+    top: 45%;
+    right: 18%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slide {
+    display: none;
+}
+
+/* at a glance  */
+.glance-item {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+.glance-item div {
+    margin: 10px 50px 50px 50px;
+}
+
+.glance-item div p {
+    text-align: center;
+    margin: 30px;
+    font-size: 1.5rem;
+}
+
+/* zoon effect  */
+.zoom-effect {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    overflow: hidden;
+    border-bottom: 2px solid black;
+}
+
+.zoom-effect div {
+    margin: 20px;
+    text-align: center;
+}
+
+.zoom-effect div img {
+    max-width: 100%;
+    transition: transform 1s;
+}
+
+.zoom-effect div img:hover {
+    transform: scale(1.1);
+}
+
+/* extraordinary-villa */
+.extraordinary-villa {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    margin: 10px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.extraordinary-villa div {
+    margin: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.extraordinary-villa img {
+    width: 100%;
+    transition: transform 1s;
+}
+
+.extraordinary-villa img:hover {
+    transform: scale(1.1);
+}

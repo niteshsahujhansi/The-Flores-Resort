@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners</title>
+    <!-- header  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+    <style>
+        .container {
+            /* CHANGE TO GRID */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            grid-gap: 10px;
+            margin: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 480px;
+        }
+
+        .card-header img {
+            object-fit: cover;
+            height: 350px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <img src="img/partners.jpg" width="100%" alt="">
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p1.jpg" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>Bouchard Finlayson</h3>
+                <p>Our sister vineyard lies in the lovely Hemel-en-Aarde Valley (Heaven and Earth), part of the Walker
+                    Bay wine region near Hermanus, South Africa’s whale watching capital. We are proud to serve Bouchard
+                    Finlayson, acclaimed worldwide for producing the best Pinot Noir in South Africa, as well as
+                    exceptional Chardonnays and Sauvignon Blancs.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p2.png" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>Champagne Lanson</h3>
+                <p>As one of the oldest holders of the Royal Warrant, Lanson has been producing some of the world’s
+                    finest champagnes since 1760 and the craft has been passed down from generation to generation. We
+                    are proud to serve Lanson Champagne in our restaurant and bar.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p3.png" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>BELU Water</h3>
+                <p>Providing The Milestone with sustainable glass-bottled mineral water as well as filtered water, BELU
+                    supports us in our bid to eliminate single-use plastic bottles. BELU is one of our proud partners
+                    and gives 100% of their profits to the charity WaterAid to help transform lives worldwide with clean
+                    water.</p>
+            </div>
+        </div>
+    </div>
+    <!-- container 2 -->
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p4.png" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>Leitha CleanCoat™</h3>
+                <p>In partnership with Leitha CleanCoat™, we use this effective and sustainable self-disinfection
+                    solution at The Milestone, further improving the wellbeing of our staff and guests.
+
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p5.png" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>Pascal Lavorel</h3>
+                <p>Pascal Lavorel and his team are a dedicated group of florists and gardeners. They design exciting
+                    floral displays, exquisite classical bouquets and arrangements which take centre stage in our hotel.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p6.png" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>Maiden Voyage</h3>
+                <p>Maiden Voyage is dedicated to the needs of female travellers by recommending female friendly hotels
+                    and services; connecting women who are travelling; and providing useful travel and safety
+                    information. We are proud to meet their hotel selection criteria.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- container 3  -->
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p7.png" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>The RPO</h3>
+                <p>In partnership with the Royal Philharmonic Orchestra, we are delighted to offer our guests the
+                    opportunity to enjoy a live orchestral performance in the privacy of your suite.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p8.png" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>H Forman & Son</h3>
+                <p>The Forman family has been curing and smoking fish in the East End of London since 1905 and is the
+                    last of the original London salmon smokeries. We are proud to serve this delicious smoked salmon in
+                    our restaurant.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <img src="./img/p9.png" alt="" />
+            </div>
+            <div class="card-body">
+                <h3>PMD Tea</h3>
+                <p>PMD Tea is a family owned business, running for over 75 years and through three generations. At the
+                    centre of all PMD Tea is the time-honoured tradition of skilfully hand picking two leaves and a bud,
+                    producing a signature flavour that can be enjoyed with our delicious Afternoon Teas.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="footer"></div>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Victoria & Albert</title>
+    <!-- header  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+    <style>
+        .room {
+            font-family: 'Roboto', sans-serif;
+            margin: 50px 380px;
+        }
+
+        .room img {
+            width: 750px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            height: 530px;
+            width: 750px;
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            transform: translateX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            background-color: rgb(8, 0, 16);
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            width: 49.5%;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        /* at a glance  */
+        .glance-item {
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid black;
+        }
+
+        .glance-item div {
+            margin: 10px 50px 50px 50px;
+        }
+
+        .glance-item div p {
+            text-align: left;
+            margin: 20px;
+            font-size: 1.5rem;
+        }
+
+        .bullet li {
+            list-style: disc;
+        }
+
+        .center {
+            margin: 20px 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <section class="video">
+        <video autoplay muted loop width="100%" src="img/rooms/vic.mp4"></video>
+    </section>
+
+
+    <h2>The Victoria & Albert</h2>
+    <div class="center">
+        <p>Located on the second floor, the elegant Victoria & Albert residence conveys a calm and peaceful ambience,
+            while the traditional design mirrors the rich history of the building with luxury fabrics, antique furniture
+            and spectacular artwork. It showcases an open plan kitchen and spacious entertaining area, as well as a
+            lovely outlook onto the street. It is an ideal family option with a sofa bed plus two thoughtfully designed
+            bedrooms with king-size beds.</p>
+        <p>Residence size: 82.8m2</p>
+        <p>Capacity: Two adults and up to four children or four adults and up to two small children</p>
+    </div>
+
+
+    <div class="room">
+        <div class="carousel">
+            <div class="image-container" id="imgs">
+                <img src="img/rooms/vic1.png" alt="">
+                <img src="img/rooms/vic2.png" alt="">
+                <img src="img/rooms/vic3.png" alt="">
+                <img src="img/rooms/vic4.png" alt="">
+                <img src="img/rooms/vic5.png" alt="">
+            </div>
+            <div class="buttons-container">
+                <button id="left" class="btn">Prev</button>
+                <button id="right" class="btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- at a glance   -->
+    <div class="glance">
+        <h2>Residence features</h2>
+        <div class="glance-item">
+            <div>
+                <p>Second-floor location</p>
+                <p>Two-bedroom residence with two bathrooms</p>
+                <p>Three steps that split the level of the residence</p>
+                <p>Spacious lounge with open plan kitchen</p>
+                <p>Equipped with a walk-in shower and a bathtub</p>
+                <p>Luxury fabrics, antique furniture and spectacular artwork</p>
+                <p>Welcome drink upon arrival</p>
+                <!-- <p>Luxury Floris toiletries</p> -->
+                <!-- <p>Individually controlled heating and cooling system</p> -->
+            </div>
+            <div>
+                <p>A beautiful fireplace in each living room</p>
+                <p>Full 24-hour hotel service but with the extra living space of a private apartment</p>
+                <p>Complimentary access to hotel Health Club</p>
+                <p>Full grocery shopping service on request</p>
+                <p>A welcome hamper of goodies for longer staying guests</p>
+                <p>Luxury toiletries</p>
+                <!-- <p>'Suite treats' each night at Turndown</p> -->
+                <!-- <p>Sky television and Chromecast</p> -->
+            </div>
+            <div>
+                <p>'Suite treats' each night at evening Turndown service</p>
+                <p>A peaceful oasis of calm in the most exclusive residential district of London</p>
+                <p>Security entry phone with a video system</p>
+                <p>Selection of magazines and books</p>
+                <p>Washing machine and dryer</p>
+                <!-- <p>24-hour butler service</p>
+                <p>Grocery shopping service available</p>
+                <p>Access to the gym, resistance plunge pool and sauna</p>
+                <p>Luxury toiletries</p> -->
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        const imgs = document.getElementById('imgs')
+        const leftBtn = document.getElementById('left')
+        const rightBtn = document.getElementById('right')
+
+        const img = document.querySelectorAll('#imgs img')
+
+        let idx = 0
+
+        let interval = setInterval(run, 2000)
+
+        function run() {
+            idx++
+            changeImage()
+        }
+
+        function changeImage() {
+            if (idx > img.length - 1) {
+                idx = 0
+            } else if (idx < 0) {
+                idx = img.length - 1
+            }
+
+            imgs.style.transform = `translateX(${-idx * 750}px)`
+        }
+
+        function resetInterval() {
+            clearInterval(interval)
+            interval = setInterval(run, 2000)
+        }
+
+        rightBtn.addEventListener('click', () => {
+            idx++
+            changeImage()
+            resetInterval()
+        })
+
+        leftBtn.addEventListener('click', () => {
+            idx--
+            changeImage()
+            resetInterval()
+        })
+    </script>
+
+</body>
+
+</html>

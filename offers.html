@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gifts</title>
+
+    <!-- header footer script  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+    <style>
+        .extraordinary-villa {
+            display: grid;
+            grid-auto-flow: row;
+            grid-auto-columns: 1fr;
+            margin: 10px;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            align-items: center;
+            border-bottom: 2px solid black;
+        }
+
+        .extraordinary-villa div {
+            margin: 30px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .extraordinary-villa img {
+            width: 100%;
+        }
+
+        p {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header  -->
+    <header id="header"></header>
+    <img src="img/rooms/ggift.png" width="100%" alt="">
+
+    <!-- extraordinary-villa  -->
+    <div class="extraordinary-villa">
+        <div class="extraordinary">
+            <a href=""><img src="img/rooms/gift1.png" alt=""></a>
+        </div>
+
+        <div class="extraordinary-text">
+            <h2>Pre-pay and save</h2>
+            <h5>Valid January 2022 onward</h5>
+            <p>Starting to plan your next trip? We’re rewarding those who pre-pay with up to 20% discount on our best
+                available rates.</p>
+            <p>This offer is available on all rooms and suites for all future dates, inclusive or without breakfast.</p>
+            <p>Why not take advantage of our add-ons when booking? You could enjoy a chilled bottle of Champagne in your
+                room upon arrival.</p>
+
+
+        </div>
+
+        <div class="villa-text">
+            <h2>3 nights for the price of 2</h2>
+            <h5>Valid on last date of each month</h5>
+            <p>Stay a little longer with us in one of our unique residences, offering as much unrestrained luxury as you
+                need.</p>
+            <p>For every three nights booked you'll receive the third night absolutely free! Allow yourself to be
+                reminded of what magnificence really feels like with an extended escape at The Flores Resort.</p>
+
+
+
+        </div>
+        <div class="villa">
+            <a href=""><img src="img/rooms/gift2.png" alt=""></a>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <footer id="footer"></footer>
+</body>
+
+</html>

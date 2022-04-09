@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen</title>
+    <!-- header  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('#header').load('header.html');
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#footer').load('footer.html');
+        });
+    </script>
+
+    <style>
+        .room {
+            font-family: 'Roboto', sans-serif;
+            margin: 50px 380px;
+        }
+
+        .room img {
+            width: 750px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .carousel {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            height: 530px;
+            width: 750px;
+            overflow: hidden;
+        }
+
+        .image-container {
+            display: flex;
+            transform: translateX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            background-color: rgb(8, 0, 16);
+            color: #fff;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            width: 49.5%;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        /* at a glance  */
+        .glance-item {
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid black;
+        }
+
+        .glance-item div {
+            margin: 10px 50px 50px 50px;
+        }
+
+        .glance-item div p {
+            text-align: left;
+            margin: 20px;
+            font-size: 1.5rem;
+        }
+
+        .bullet li {
+            list-style: disc;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <img src="img/rooms/rooms.png" width="100%" alt="">
+
+
+    <h2>Superior Queen Suites</h2>
+    <p>Our queen-bedded Suites are adorned with fine fabrics and antique furnishings and enlivened with views over The
+        Conservatory Courtyard. </p>
+    <p>No two rooms are alike - each welcomes you with the soft embrace of stylish individuality.</p>
+
+
+    <div class="room">
+        <div class="carousel">
+            <div class="image-container" id="imgs">
+                <img src="img/rooms/queen1.png" alt="">
+                <img src="img/rooms/queen2.png" alt="">
+                <img src="img/rooms/queen3.png" alt="">
+                <img src="img/rooms/queen4.png" alt="">
+            </div>
+            <div class="buttons-container">
+                <button id="left" class="btn">Prev</button>
+                <button id="right" class="btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- at a glance   -->
+    <div class="glance">
+        <h2>Suites amenities</h2>
+        <div class="glance-item">
+            <div>
+                <p>Average room size 20m2 (215sq ft)</p>
+                <p>24-hour room service</p>
+                <p>Bottled mineral water</p>
+                <p>Complimentary WI-FI throughout the hotel</p>
+                <p>Daily newspaper</p>
+                <p>Luxury toiletries</p>
+                <p>Flowers or plants in all rooms</p>
+                <p>A fruit plate or homemade cookies on arrival</p>
+                <p>Individually controlled heating and cooling system</p>
+            </div>
+            <div>
+                <p>Iron and ironing board</p>
+                <p>Hairdryers</p>
+                <p>Magazines and books</p>
+                <p>Minibars</p>
+                <p>Movies on demand</p>
+                <p>Plush bathrobe and Ladies and Gents slippers</p>
+                <p>Safes (in-room electronic safes)</p>
+                <p>Speaker telephones</p>
+                <p>Twice daily housekeeping</p>
+                <p>Sky television and Chromecast</p>
+            </div>
+            <div>
+                <p>Welcome beverage on arrival</p>
+                <p>Weather card with the next day's forecast</p>
+                <p>Hot water bottle on request</p>
+                <p>Floating votive candles at Turndown</p>
+                <p>Complimentary rental of mobile phones</p>
+                <p>Female friendly services include 24-hour <br> security, allocating rooms near guest lifts and locking
+                    of the hotel doors at night</p>
+                <p>International direct dial plus voicemail</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="footer"></div>
+
+    <script>
+        const imgs = document.getElementById('imgs')
+        const leftBtn = document.getElementById('left')
+        const rightBtn = document.getElementById('right')
+
+        const img = document.querySelectorAll('#imgs img')
+
+        let idx = 0
+
+        let interval = setInterval(run, 2000)
+
+        function run() {
+            idx++
+            changeImage()
+        }
+
+        function changeImage() {
+            if (idx > img.length - 1) {
+                idx = 0
+            } else if (idx < 0) {
+                idx = img.length - 1
+            }
+
+            imgs.style.transform = `translateX(${-idx * 750}px)`
+        }
+
+        function resetInterval() {
+            clearInterval(interval)
+            interval = setInterval(run, 2000)
+        }
+
+        rightBtn.addEventListener('click', () => {
+            idx++
+            changeImage()
+            resetInterval()
+        })
+
+        leftBtn.addEventListener('click', () => {
+            idx--
+            changeImage()
+            resetInterval()
+        })
+    </script>
+
+</body>
+
+</html>
